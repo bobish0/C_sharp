@@ -6,9 +6,27 @@ namespace Talang2022
 {
     class Program
     {
+
+        // LABB 2
+        private static int TestValueType(int i)
+        {
+            i++;
+            return i;
+        }
+
+        private static string TestRefType(IList<int> numbers)
+        {
+            numbers[0]++;
+            return $"[{string.Join(", ", numbers)}]";
+        }
+
+
         static void Main(string[] args)
         {
 
+
+
+            // LABB 1
             var obj = new object(); // Object Variable 
             var num = 1; // Integer Variable 
             var str = "abc"; // String Variable
@@ -33,7 +51,17 @@ namespace Talang2022
              * Main method can also in the terminal accept props when being runned
              */
             Console.WriteLine("Hello World!");
+
+
+            //LABB 2.1
            
+
+            Console.WriteLine(TestValueType(num));
+            Console.WriteLine(TestRefType(arr));
+            // use breakpoints to help with debugging code on particular lines
+           
+
+
         }
     }
 }
